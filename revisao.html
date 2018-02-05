@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+
+        <script type="text/javascript">
+
+            let v1 = 1;  //variavel numerica
+            let v2 = true;  // booleana
+            let v3 = 'texto'; // string
+
+            let cadeira = {
+                pe: 4,  //par chave-valor pe: 4 do tipo numero
+                cor: 'preta', //par chave-valor cor: preta tipo texto
+            };
+
+
+            console.log(cadeira.pe); //o console ira informar que minha cadeira tem 4 pes
+
+            let vetorDeNumeros = [34, 55, -9]; //é uma variavel que possui divisoes e que me permite armazenar varias informacoes, no caso, numeros
+
+            console.log(vetorDeNumeros[1]); //estou acessando o meu vetor de numeros na posicao 1, que contém o valor 55
+
+            let vetorDeLapis = [            // é um vetor, assim como o exemplo acima, mas ao inves de armazenar numeros
+                {                           // estamos armazenado objetos
+                    cor: 'vermelho',
+                    marca: 'faber castel'
+
+                },
+                {
+                    cor: 'azul',
+                    marca: 'bic'
+                },
+                {
+                    cor: 'amarelo',
+                    marca: 'faber castel'
+                }
+            ];
+
+            console.log(vetorDeLapis[2].cor); // estou acessando o objeto lapis, que esta na posicao 2, e consultando seu atributo cor
+
+
+            //****** OPERACOES LOGICAS
+
+
+            let valor1 = 2;
+            let valor2 = 3;
+
+            let soma = valor1 + valor2; // o valor1 esta sendo somado ao valor2, e o resultado da operacao esta sendo armazenado em soma
+            // let valor1 + valor2 = soma; ASSIM NAO FUNCIONA
+
+            let subtracao = valor1 - valor2;
+
+            let multiplicacao = valor1 * valor2;
+
+            let divisao = valor1 / valor2;
+
+            let potencia = valor1 ** valor2; // valor1 esta sendo elevado a valor2
+            console.log(potencia);
+
+
+            //****** TOMADAS DE DECISAO
+
+            //          if (se esta condicao for verdadeira){
+            //                  ele executa o que tiver aqui dentro
+
+            //          } else {
+            //
+            //               caso a condicao seja falsa, executa esta outra parte
+            //          }
+
+            let num1 = 5;
+            let num2 = 3;
+
+
+            if( num1 > num2){  // caso num1 seja maior que num2,
+                console.log( num1 + num2 ); // imprimo no console a soma deles
+
+            } else{ // senao,
+                console.log( num1 - num2 ); // imprimo no console a diferenca deles
+
+
+            }
+
+            // para validar se dois numeros sao iguais:   num1 == num2
+            // para validar se dois numeros sao diferentes:  num1 != num2
+
+            // EXEMPLO 'E'
+            if ( num1 > 3 && num2 == 5){  // se num1 for maior que 3  E  num2 for igual a 5
+
+                // executa essa parte
+
+            } else{
+                // se alguma das condicoes forem falsas, ele executa essa outra parte
+
+            }
+
+            // EXEMPLO 'OU'
+
+            if( num1 == 0 ||  num2 == 1){ // se o num1 for igual a 0  OU num2 igual a 1
+                    // executa essa
+
+            } else{
+
+                    // se nenhuma das condicoes forem verdadeiras
+                    //executa essa outra
+
+            }
+
+
+
+            //************** LAÇO DE REPETICAO
+
+            let letras = ['a', 'b', 'c'];
+
+            for (let letra of letras){ // repita esse laco o numero de vezes que corresponda ao tamanho do meu vetor letras
+                                        // portanto, se meu vetor letras tiver tamanho 3, o laco sera executado 3 vezes
+                console.log(letra);     // letra é uma variavel de apoio que, a cada vez que o laco for executado, assume
+                                        // o valor correspondente a posicao do vetor
+                                        // se tiver na terceira execucao do laco, letra é igual ao conteudo da terceira posicao
+            }
+
+
+            let garrafas = [
+                {
+                    cor: 'azul'
+                },
+
+                {
+                    cor: 'rosa'
+                }
+            ];
+
+            for(let garrafa of garrafas){
+                console.log(garrafa.cor);  // estamos imprimindo o atributo cor de cada garrafa do nosso vetor garrafas
+            }
+
+
+            // ******* INTERACAO COM O USUARIO
+
+            // prompt('sua mensagem aqui');
+            // -- prompt é uma funcao em que o usuario pode inserir um valor, e esse valor deve ser armazenado em uma variavel
+
+            let nomeCachorro = prompt('diga o nome do seu cachorro');
+
+            alert(`o nome digitado foi: ${nomeCachorro}`); //estamos exibindo na mensagem o nome do cachorro digitado pelo usuario
+                                                            // tem que ser crase para imprimir texto e variavel
+
+            
+
+
+        </script>
+
+
+
+
+
+
+
+
+
+    </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+
+        <h1>Meu titulo</h1>
+
+        <div class="azul">Minha div</div>
+
+        <p id="paragrafo1" >meu paragrafo</p>
+
+        <h2 onclick="mudarCor()"> MEU TEXTO MUDA DE COR </h2>
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/John_Travolta_Deauville_2013_2.jpg" onmouseover="mudarFoto()">
+
+        <script type="text/javascript">
+
+
+            // RECUPERANDO UMA TAG HTML PARA MANIPULAR NO JAVASCRIPT
+
+            let titulo = document.querySelector('h1'); // a querySelector permite que a gente busque no html a tag correspondente ao parametro
+                                          // parametro é a informacao que esta dentro dos parenteses
+                                          // a variavel titulo armazena a minha tag h1
+
+            console.log(titulo);
+
+            let div = document.querySelector('.azul'); // o . indica que é um elemento que contem a classe azul
+
+            let p = document.querySelector('#paragrafo1'); // a # indica que é um elemento que contem o id paragrafo1
+
+
+            // MANIPULANDO A TAG HTML ATRAVES DO JS
+
+            titulo.innerHTML = 'meu novo titulo';  // altera o conteudo da minha tag titulo (que é o h1)
+
+
+            titulo.style.color = 'blue'; // altera a cor do texto
+
+
+
+
+            let mudarCor = () =>{
+
+                    let titulo2 = document.querySelector('h2');
+
+                    console.log(titulo2);
+                    titulo2.style.color = '#007fff';
+
+            }
+
+
+            let mudarFoto = () =>{
+                let imagem = document.querySelector('img');
+
+                // imagem.src = 'https://echoboomer.pt/wp-content/uploads/2017/10/brunomars_destaque_Echoboomer.jpg';
+
+                imagem.setAttribute('src', 'https://echoboomer.pt/wp-content/uploads/2017/10/brunomars_destaque_Echoboomer.jpg');
+
+                imagem.setAttribute('onmouseout', 'excluirImagem()');
+            }
+
+
+
+        </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>
